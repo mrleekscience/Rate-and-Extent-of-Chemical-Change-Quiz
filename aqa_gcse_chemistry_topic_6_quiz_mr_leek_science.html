@@ -1,0 +1,2984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr Leek Science — AQA GCSE Chemistry Topic 6: The Rate and Extent of Chemical Change</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ==========================================================================
+       MR LEEK SCIENCE — CRIMSON / RUBY RED DESIGN TOKENS (TOPIC 6)
+       ========================================================================== */
+    :root {
+      --crimson-950: #1f070a;
+      --crimson-900: #450a0a;
+      --crimson-800: #7f1d1d;
+      --ruby-700: #991b1b;
+      --ruby-600: #b91c1c;
+      --ruby-500: #dc2626;
+      --ruby-400: #ef4444;
+
+      --rose-200: #fecaca;
+      --rose-100: #fee2e2;
+      --rose-50: #fef2f2;
+      --rose-tint: #fffafa;
+
+      --bg-page: #f1f5f9;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+
+      --blue-100: #e0f2fe;
+      --blue-700: #0369a1;
+      --purple-100: #f3e8ff;
+      --purple-700: #7e22ce;
+
+      --emerald-700: #047857;
+      --emerald-600: #059669;
+      --emerald-100: #d1fae5;
+      --emerald-50: #ecfdf5;
+
+      --amber-700: #b45309;
+      --amber-600: #d97706;
+      --amber-100: #fef3c7;
+      --amber-50: #fffbeb;
+
+      --shadow-shell: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+      --shadow-cta: 0 6px 18px -2px rgba(185, 28, 28, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--slate-900);
+      min-height: 100vh;
+      padding: 1.5rem 1rem 3rem;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* ==========================================================================
+       CENTERED MAIN CARD CONTAINER
+       ========================================================================== */
+    .app-container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-shell);
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       TOP CRIMSON BANNER HEADER
+       ========================================================================== */
+    .banner-header {
+      background: linear-gradient(135deg, #1f070a 0%, #450a0a 55%, #7f1d1d 100%);
+      padding: 32px 36px;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .banner-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .spec-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--rose-200);
+    }
+
+    .brand-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.85);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .banner-title {
+      font-size: clamp(1.5rem, 3vw, 1.98rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.22;
+      letter-spacing: -0.015em;
+      margin-bottom: 8px;
+    }
+
+    .banner-subtitle {
+      font-size: 0.94rem;
+      color: var(--slate-200);
+      max-width: 780px;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       WHITE FORM BODY
+       ========================================================================== */
+    .card-body {
+      padding: 28px 36px 36px;
+    }
+
+    .section-block {
+      margin-bottom: 26px;
+    }
+
+    /* Row 1: Student Name & Email Address */
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 8px;
+    }
+
+    .field-label .req-star {
+      color: var(--ruby-500);
+      margin-left: 2px;
+    }
+
+    .field-label .opt-muted {
+      color: var(--slate-400);
+      font-weight: 500;
+      margin-left: 3px;
+    }
+
+    .text-input {
+      width: 100%;
+      padding: 12px 15px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      background: #ffffff;
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .text-input::placeholder {
+      color: var(--slate-400);
+    }
+
+    .text-input:focus {
+      outline: none;
+      border-color: var(--ruby-500);
+      box-shadow: 0 0 0 3.5px rgba(220, 38, 38, 0.14);
+    }
+
+    .text-input.input-error {
+      border-color: var(--ruby-500);
+      background-color: var(--rose-50);
+      animation: shakeInput 0.32s ease;
+    }
+
+    .error-hint {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ruby-600);
+      margin-top: 5px;
+    }
+
+    @keyframes shakeInput {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
+    /* Section Header Bar */
+    .section-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .selected-tier-pill {
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      color: var(--ruby-600);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .avail-count-text {
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--slate-500);
+    }
+
+    /* Row 2: 3-Column Tier Selection Grid */
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .tier-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 18px 18px 20px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .tier-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .tier-card.selected {
+      border-color: var(--ruby-500);
+      background: var(--rose-tint);
+      box-shadow: 0 4px 14px rgba(220, 38, 38, 0.08);
+    }
+
+    .tier-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .spec-chip {
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .chip-blue {
+      background: var(--blue-100);
+      color: var(--blue-700);
+    }
+
+    .chip-rose {
+      background: var(--rose-100);
+      color: var(--ruby-600);
+    }
+
+    .chip-purple {
+      background: var(--purple-100);
+      color: var(--purple-700);
+    }
+
+    .radio-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid var(--slate-300);
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.16s ease;
+      flex-shrink: 0;
+    }
+
+    .radio-circle svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--slate-300);
+      stroke-width: 2.8;
+      fill: none;
+    }
+
+    .tier-card.selected .radio-circle {
+      background: var(--ruby-500);
+      border-color: var(--ruby-500);
+    }
+
+    .tier-card.selected .radio-circle svg {
+      stroke: #ffffff;
+    }
+
+    .tier-card-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+
+    .tier-card-desc {
+      font-size: 0.83rem;
+      color: var(--slate-600);
+      line-height: 1.52;
+    }
+
+    /* Row 3: 2-Column Quiz Focus Grid */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .focus-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 16px 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      text-align: left;
+      transition: all 0.18s ease;
+    }
+
+    .focus-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .focus-card.selected {
+      border-color: var(--ruby-500);
+      background: var(--rose-tint);
+      box-shadow: 0 4px 14px rgba(220, 38, 38, 0.08);
+    }
+
+    .focus-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: all 0.18s ease;
+    }
+
+    .focus-icon-ruby {
+      background: var(--ruby-500);
+      color: #ffffff;
+    }
+
+    .focus-icon-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+    }
+
+    .focus-card.selected .focus-icon-amber {
+      background: var(--ruby-500);
+      color: #ffffff;
+    }
+
+    .focus-content {
+      flex: 1;
+    }
+
+    .focus-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .focus-check {
+      color: var(--ruby-500);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .focus-desc {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.48;
+    }
+
+    /* Row 4: Number of Questions 5-Column Grid */
+    .count-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .count-btn {
+      background: #ffffff;
+      border: 1.5px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 13px 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .count-btn:hover:not(.active) {
+      border-color: var(--slate-300);
+      background: var(--slate-50);
+    }
+
+    .count-btn.active {
+      background: var(--ruby-500);
+      border-color: var(--ruby-500);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.28);
+    }
+
+    /* Divider + Bottom Full-Width CTA */
+    .cta-divider {
+      border: none;
+      border-top: 1px solid var(--slate-200);
+      margin: 26px 0 22px;
+    }
+
+    .btn-start-cta {
+      width: 100%;
+      background: var(--ruby-600);
+      color: #ffffff;
+      border: none;
+      border-radius: 14px;
+      padding: 16px 24px;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: var(--shadow-cta);
+      transition: background 0.18s ease, transform 0.15s ease;
+    }
+
+    .btn-start-cta:hover {
+      background: var(--ruby-700);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       SCREEN 2: ACTIVE QUIZ INTERFACE
+       ========================================================================== */
+    .quiz-hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hud-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hud-pill-dark {
+      background: var(--crimson-800);
+      color: #ffffff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-rose {
+      background: var(--rose-50);
+      color: var(--ruby-600);
+      border: 1px solid var(--rose-200);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-stats {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hud-score-badge {
+      background: var(--emerald-50);
+      color: var(--emerald-700);
+      border: 1px solid #a7f3d0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 999px;
+    }
+
+    .hud-q-counter {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-700);
+    }
+
+    .hud-change-btn {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .hud-change-btn:hover {
+      border-color: var(--ruby-500);
+      color: var(--ruby-600);
+      background: var(--rose-tint);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--ruby-700), var(--ruby-500));
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    .question-box {
+      background: var(--rose-tint);
+      border: 1.5px solid var(--rose-200);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 18px;
+    }
+
+    .q-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 8px;
+    }
+
+    .q-kicker {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ruby-600);
+    }
+
+    .kbd-tip {
+      font-size: 0.73rem;
+      color: var(--slate-400);
+      font-weight: 500;
+    }
+
+    .q-stem {
+      font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+      font-weight: 700;
+      color: var(--slate-900);
+      line-height: 1.5;
+    }
+
+    .q-formula-box {
+      margin-top: 12px;
+      background: #ffffff;
+      border: 1px solid var(--rose-200);
+      border-left: 4px solid var(--ruby-500);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-family: "Plus Jakarta Sans", monospace;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--crimson-900);
+      line-height: 1.5;
+    }
+
+    /* Data Mini-Table Inside Formula Box */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-family: "Inter", sans-serif;
+      font-size: 0.85rem;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid var(--rose-200);
+      padding: 6px 10px;
+      text-align: center;
+    }
+
+    .data-table th {
+      background: var(--rose-50);
+      color: var(--crimson-900);
+      font-weight: 700;
+    }
+
+    .data-table td {
+      background: #ffffff;
+      color: var(--slate-800);
+      font-weight: 600;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 18px;
+    }
+
+    .opt-btn {
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: var(--slate-800);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      transition: all 0.15s ease;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      border-color: var(--ruby-500);
+      background: var(--rose-tint);
+    }
+
+    .opt-btn:disabled {
+      cursor: default;
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      font-size: 0.82rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .opt-btn.correct {
+      border-color: var(--emerald-600);
+      background: var(--emerald-50);
+      color: var(--slate-900);
+    }
+
+    .opt-btn.correct .opt-letter {
+      background: var(--emerald-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.incorrect {
+      border-color: var(--ruby-500);
+      background: var(--rose-50);
+      color: var(--crimson-900);
+    }
+
+    .opt-btn.incorrect .opt-letter {
+      background: var(--ruby-500);
+      color: #ffffff;
+    }
+
+    .opt-btn.dimmed {
+      opacity: 0.55;
+    }
+
+    .feedback-panel {
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      animation: fadeSlide 0.22s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .feedback-panel.fb-pass {
+      background: var(--emerald-50);
+      border: 1px solid #a7f3d0;
+      border-left: 5px solid var(--emerald-600);
+    }
+
+    .feedback-panel.fb-fail {
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      border-left: 5px solid var(--ruby-500);
+    }
+
+    .fb-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .fb-status {
+      font-weight: 800;
+      font-size: 0.98rem;
+    }
+
+    .fb-pass .fb-status { color: var(--emerald-700); }
+    .fb-fail .fb-status { color: var(--ruby-600); }
+
+    .fb-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.85);
+      color: var(--slate-600);
+      border: 1px solid var(--slate-200);
+    }
+
+    .fb-text {
+      font-size: 0.91rem;
+      color: var(--slate-800);
+      line-height: 1.55;
+    }
+
+    .quiz-bottom-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 14px;
+      border-top: 1px solid var(--slate-200);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      padding: 11px 18px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--slate-50);
+      border-color: var(--slate-400);
+    }
+
+    .btn-primary-sm {
+      background: var(--ruby-600);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 22px;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(185, 28, 28, 0.25);
+      transition: background 0.16s ease;
+    }
+
+    .btn-primary-sm:hover {
+      background: var(--ruby-700);
+    }
+
+    /* ==========================================================================
+       SCREEN 3: DIAGNOSTIC REPORT
+       ========================================================================== */
+    .report-hero-box {
+      background: var(--rose-tint);
+      border: 1.5px solid var(--rose-200);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .report-student-line {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ruby-600);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .report-score-row {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .report-pct {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.3rem);
+      font-weight: 800;
+      color: var(--ruby-600);
+      line-height: 1;
+    }
+
+    .report-fraction {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--slate-600);
+    }
+
+    .grade-pill {
+      display: inline-block;
+      background: var(--crimson-800);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .report-summary-msg {
+      font-size: 0.93rem;
+      color: var(--slate-700);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .report-btn-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .mastery-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--slate-200);
+    }
+
+    .mastery-section-head h3 {
+      font-size: 1.05rem;
+      color: var(--slate-900);
+    }
+
+    .legend-row {
+      display: flex;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    .tag-g { background: var(--emerald-50); color: var(--emerald-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-a { background: var(--amber-50); color: var(--amber-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-r { background: var(--rose-50); color: var(--ruby-600); padding: 3px 9px; border-radius: 999px; }
+
+    .mastery-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .mastery-item {
+      border: 1.5px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: #ffffff;
+    }
+
+    .mastery-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mastery-name {
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--slate-900);
+    }
+
+    .mastery-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .sc-strong { background: var(--emerald-100); color: var(--emerald-700); }
+    .sc-dev { background: var(--amber-100); color: var(--amber-700); }
+    .sc-weak { background: var(--rose-100); color: var(--ruby-600); }
+
+    .mastery-bar-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 7px;
+    }
+
+    .mastery-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .fill-g { background: var(--emerald-600); }
+    .fill-a { background: var(--amber-600); }
+    .fill-r { background: var(--ruby-500); }
+
+    .mastery-tip {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .review-card {
+      border: 1.5px solid var(--slate-200);
+      border-left: 5px solid var(--slate-400);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .review-card.rc-ok { border-left-color: var(--emerald-600); }
+    .review-card.rc-bad { border-left-color: var(--ruby-500); }
+
+    .rc-kicker {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--ruby-600);
+      margin-bottom: 4px;
+    }
+
+    .rc-q {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+    }
+
+    .rc-ans {
+      font-size: 0.86rem;
+      margin-bottom: 3px;
+    }
+
+    .rc-exp {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--slate-200);
+      font-size: 0.84rem;
+      color: var(--slate-700);
+      line-height: 1.52;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--slate-400);
+      margin-top: 1.5rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 820px) {
+      .tier-grid {
+        grid-template-columns: 1fr;
+      }
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0.75rem 0.65rem 2rem;
+      }
+      .banner-header {
+        padding: 24px 20px;
+      }
+      .card-body {
+        padding: 20px 18px 26px;
+      }
+      .input-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .count-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .kbd-tip {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- ======================================================================
+         CRIMSON HEADER BANNER
+         ====================================================================== -->
+    <header class="banner-header">
+      <div class="banner-top-row">
+        <span class="spec-pill">TOPIC 6 &bull; PAPER 2 REVISION (8462 &amp; 8464)</span>
+        <span class="brand-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fecaca" stroke-width="2.2">
+            <circle cx="12" cy="13" r="8"></circle>
+            <path d="M12 9v4l2.5 2.5"></path>
+            <path d="M9 2h6"></path>
+            <path d="M12 2v3"></path>
+          </svg>
+          Mr Leek Science
+        </span>
+      </div>
+      <h1 id="banner-main-title" class="banner-title">Configure Your Rate &amp; Extent of Change Quiz</h1>
+      <p id="banner-main-sub" class="banner-subtitle">Enter your name, choose your tier, select either all Topic 6 content or Required Practical 5 drills, and pick your question count.</p>
+    </header>
+
+    <!-- ======================================================================
+         VIEW 1: CONFIGURATION SCREEN
+         ====================================================================== -->
+    <main id="view-config" class="card-body">
+      <!-- Row 1: Student Name & Email Address -->
+      <div class="section-block input-grid">
+        <div class="field-group">
+          <label for="student-name" class="field-label">Student Name <span class="req-star">*</span></label>
+          <input type="text" id="student-name" class="text-input" placeholder="Enter your full name" autocomplete="name" />
+          <span id="name-error-msg" class="error-hint hidden">Please enter your name before starting the quiz.</span>
+        </div>
+
+        <div class="field-group">
+          <label for="student-email" class="field-label">Email Address <span class="opt-muted">(Optional)</span></label>
+          <input type="email" id="student-email" class="text-input" placeholder="e.g. student@school.co.uk" autocomplete="email" />
+        </div>
+      </div>
+
+      <!-- Row 2: Select Tier / Pathway -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Select Tier / Pathway</span>
+          <span id="selected-tier-badge" class="selected-tier-pill">Higher Tier Selected</span>
+        </div>
+
+        <div class="tier-grid" role="radiogroup" aria-label="Select Tier or Pathway">
+          <!-- Foundation Tier -->
+          <div class="tier-card" id="tier-card-foundation" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('foundation')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('foundation')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-blue">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Foundation Tier</div>
+            <p class="tier-card-desc">Calculating mean rates (g/s, cm<sup>3</sup>/s), collision theory factors (temperature, concentration, pressure, surface area), catalysts, Required Practical 5 &amp; reversible reactions (Grades 1–5).</p>
+          </div>
+
+          <!-- Higher Tier (Default Selected) -->
+          <div class="tier-card selected" id="tier-card-higher" role="radio" aria-checked="true" tabindex="0" onclick="selectTier('higher')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('higher')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-rose">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Higher Tier</div>
+            <p class="tier-card-desc">Includes tangents on curved rate graphs (&Delta;y/&Delta;x), mol/s rate units, dynamic equilibrium in closed systems, and Le Chatelier's Principle for concentration, temperature &amp; pressure (Grades 4–9).</p>
+          </div>
+
+          <!-- Separate Chemistry -->
+          <div class="tier-card" id="tier-card-separate" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('separate')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('separate')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-purple">TRIPLE 8462</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Separate Chemistry</div>
+            <p class="tier-card-desc">Full 8462 specification including quantitative tangent gradients, complex multi-step rate expressions, industrial equilibrium compromises (Haber &amp; Contact processes) &amp; multi-factor shifts (Grades 1–9).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Quiz Focus -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Quiz Focus</span>
+        </div>
+
+        <div class="focus-grid" role="radiogroup" aria-label="Quiz Focus">
+          <!-- All Topics -->
+          <div class="focus-card selected" id="focus-card-all" role="radio" aria-checked="true" tabindex="0" onclick="selectFocus('all')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('all')">
+            <div class="focus-icon-box focus-icon-ruby" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="13" r="8"></circle>
+                <path d="M12 9v4l2.5 2.5"></path>
+                <path d="M9 2h6"></path>
+                <path d="M12 2v3"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>All Rate &amp; Extent of Change Topics</span>
+                <span id="focus-check-all" class="focus-check">&#10003;</span>
+              </div>
+              <p class="focus-desc">Covers calculating rates, tangents, collision theory, catalysts, Required Practical 5, reversible reactions &amp; Le Chatelier's Principle.</p>
+            </div>
+          </div>
+
+          <!-- Required Practical 5 Only -->
+          <div class="focus-card" id="focus-card-rp5" role="radio" aria-checked="false" tabindex="0" onclick="selectFocus('rp5')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('rp5')">
+            <div class="focus-icon-box focus-icon-amber" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6"></path>
+                <path d="M10 3v5.5L4.5 18A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-3L14 8.5V3"></path>
+                <path d="M7 15h10"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>Required Practical 5 Only</span>
+                <span id="focus-check-rp5" class="focus-check hidden">&#10003;</span>
+              </div>
+              <p class="focus-desc">Focused practical drill on RP5: Gas syringe / inverted cylinder volume vs. time AND sodium thiosulfate + HCl disappearing cross turbidity method.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4: Number of Questions -->
+      <div class="section-block" style="margin-bottom: 0;">
+        <div class="section-header-bar">
+          <span class="section-title">Number of Questions</span>
+          <span id="available-q-label" class="avail-count-text">62 unique questions available for Higher Tier</span>
+        </div>
+
+        <div class="count-grid" role="radiogroup" aria-label="Number of Questions">
+          <button type="button" class="count-btn" data-count="10" onclick="selectCount(10)">10</button>
+          <button type="button" class="count-btn active" data-count="20" onclick="selectCount(20)">20</button>
+          <button type="button" class="count-btn" data-count="30" onclick="selectCount(30)">30</button>
+          <button type="button" class="count-btn" data-count="50" onclick="selectCount(50)">50</button>
+          <button type="button" class="count-btn" data-count="80" onclick="selectCount(80)">80</button>
+        </div>
+      </div>
+
+      <hr class="cta-divider" />
+
+      <button type="button" id="btn-start-quiz" class="btn-start-cta" onclick="launchConfiguredQuiz()">
+        Start Higher Tier Quiz (20 Questions) &rarr;
+      </button>
+    </main>
+
+    <!-- ======================================================================
+         VIEW 2: ACTIVE QUIZ RUNNER
+         ====================================================================== -->
+    <section id="view-quiz" class="card-body hidden" aria-live="polite">
+      <div class="quiz-hud">
+        <div class="hud-badges">
+          <span id="hud-student-pill" class="hud-pill-dark">Student</span>
+          <span id="hud-tier-pill" class="hud-pill-rose">Higher Tier</span>
+          <span id="hud-topic-pill" class="hud-pill-rose">Sub-topic</span>
+          <span id="hud-retry-pill" class="hud-pill-amber hidden">Retry Missed Mode</span>
+        </div>
+
+        <div class="hud-stats">
+          <span id="hud-live-score" class="hud-score-badge">Score: 0 / 0</span>
+          <span id="hud-counter" class="hud-q-counter">Question 1 of 20</span>
+          <button type="button" class="hud-change-btn" onclick="returnToConfig()">Change Settings</button>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="quiz-progress-fill" class="progress-fill"></div>
+      </div>
+
+      <div class="question-box">
+        <div class="q-meta-row">
+          <span id="q-kicker-label" class="q-kicker">Question 1</span>
+          <span class="kbd-tip">Shortcuts: 1–4 or A–D to answer &bull; Enter for Next</span>
+        </div>
+        <div id="q-stem-text" class="q-stem">Question stem</div>
+        <div id="q-formula-box" class="q-formula-box hidden"></div>
+      </div>
+
+      <div id="quiz-options-list" class="options-list"></div>
+
+      <div id="quiz-feedback-panel" class="feedback-panel hidden">
+        <div class="fb-top">
+          <span id="fb-status-text" class="fb-status"></span>
+          <span class="fb-chip">AQA Examiner Insight</span>
+        </div>
+        <div id="fb-insight-text" class="fb-text"></div>
+      </div>
+
+      <div class="quiz-bottom-actions">
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">&larr; Reconfigure Quiz</button>
+        <button type="button" id="btn-next-question" class="btn-primary-sm hidden" onclick="advanceQuestion()">Next Question &rarr;</button>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW 3: END-OF-QUIZ DIAGNOSTIC REPORT
+         ====================================================================== -->
+    <section id="view-report" class="card-body hidden">
+      <div class="report-hero-box">
+        <div id="rep-student-header" class="report-student-line">Diagnostic Report &bull; Student</div>
+        <div class="report-score-row">
+          <span id="rep-pct-val" class="report-pct">85%</span>
+          <span id="rep-frac-val" class="report-fraction">(17 / 20)</span>
+        </div>
+        <div id="rep-grade-pill" class="grade-pill">Estimated AQA Indicator: Grade 8</div>
+        <p id="rep-msg-text" class="report-summary-msg"></p>
+      </div>
+
+      <div class="report-btn-row">
+        <button type="button" id="btn-retry-missed" class="btn-primary-sm" onclick="startRetryMissed()">Retry Missed Questions (3)</button>
+        <button type="button" class="btn-secondary" onclick="launchConfiguredQuiz()">Retake Full Quiz</button>
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">Reconfigure Quiz</button>
+      </div>
+
+      <div class="mastery-section-head">
+        <h3>Sub-Topic Mastery Breakdown</h3>
+        <div class="legend-row">
+          <span class="tag-g">Strong (80%+)</span>
+          <span class="tag-a">Developing (50–79%)</span>
+          <span class="tag-r">Priority Revision (&lt;50%)</span>
+        </div>
+      </div>
+
+      <div id="rep-mastery-grid" class="mastery-grid"></div>
+
+      <div class="review-header">
+        <h3 style="font-size: 1.05rem; color: var(--slate-900);">Full Question-by-Question Review</h3>
+        <button type="button" id="btn-toggle-review" class="btn-secondary" onclick="toggleReviewSection()">Show All Answers &amp; Insights</button>
+      </div>
+
+      <div id="rep-review-list" class="review-list hidden"></div>
+    </section>
+  </div>
+
+  <p class="footer-note">&copy; Mr Leek Science &bull; AQA GCSE Chemistry (8462 &amp; 8464) Topic 6 Interactive Assessment</p>
+
+  <script>
+    /* ==========================================================================
+       AQA GCSE CHEMISTRY TOPIC 6 QUESTION BANK (72 DISTINCT QUESTIONS)
+       tiers: ["foundation", "higher", "separate"]
+       focus: ["all"] or ["all", "rp5"]
+       ========================================================================== */
+    const SUBTOPIC_GUIDANCE = {
+      "Calculating Rates & Tangents": "Use Mean Rate = Quantity of reactant used or product formed &divide; Time (units: g/s, cm<sup>3</sup>/s, or mol/s). On curved graphs, the steeper the gradient the faster the rate; at a specific time t, draw a tangent and calculate gradient = &Delta;y &divide; &Delta;x.",
+      "Factors Affecting Rate & Collision Theory": "Always link rate factors to COLLISION THEORY: concentration, pressure, and surface area increase the FREQUENCY of collisions; temperature increases BOTH collision frequency AND the proportion of particles colliding with energy &ge; activation energy (E<sub>a</sub>).",
+      "Catalysts & Activation Energy": "Remember: catalysts speed up reactions by providing an alternative reaction pathway with a LOWER activation energy (E<sub>a</sub>). They are not used up and never appear in the chemical equation.",
+      "Required Practical 5: Rates of Reaction": "Compare Method A (measuring gas volume over time with a gas syringe or inverted measuring cylinder) and Method B (measuring time for a cross to disappear due to sulfur precipitate turbidity in Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub> + HCl).",
+      "Reversible Reactions & Dynamic Equilibrium": "In a reversible reaction (&#8652;), if the forward reaction is exothermic (&minus;&Delta;H), the reverse is endothermic (+&Delta;H) by the exact same amount. Dynamic equilibrium occurs in a CLOSED system when forward and reverse rates are equal.",
+      "Le Chatelier's Principle (Higher & Triple)": "When a system at equilibrium is disturbed, it shifts to OPPOSE the change: increasing temperature favours the ENDOTHERMIC direction; increasing pressure favours the side with FEWER gas molecules; catalysts do NOT shift equilibrium."
+    };
+
+    const QUESTION_POOL = [
+      // ========================================================================
+      // 1. CALCULATING RATES & TANGENTS (12 Questions)
+      // ========================================================================
+      {
+        id: "T6_Q01",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Calculating Rates & Tangents",
+        stem: "Which formula correctly calculates the mean rate of a chemical reaction?",
+        formula: "Mean Rate of Reaction",
+        options: [
+          "Quantity of reactant used (or product formed) &divide; Time taken",
+          "Time taken &divide; Quantity of product formed",
+          "Mass of catalyst &times; Temperature",
+          "Activation energy &divide; Time taken"
+        ],
+        answer: 0,
+        insight: "Mean rate = quantity of reactant used &divide; time taken, OR quantity of product formed &divide; time taken."
+      },
+      {
+        id: "T6_Q02",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Calculating Rates & Tangents",
+        stem: "In an experiment, 48 cm<sup>3</sup> of hydrogen gas is produced in 16 seconds. Calculate the mean rate of reaction with the correct unit.",
+        formula: "Mean Rate = Volume &divide; Time",
+        options: ["3.0 cm<sup>3</sup>/s", "0.33 cm<sup>3</sup>/s", "32 cm<sup>3</sup>/s", "768 cm<sup>3</sup>/s"],
+        answer: 0,
+        insight: "Mean rate = 48 cm<sup>3</sup> &divide; 16 s = 3.0 cm<sup>3</sup>/s."
+      },
+      {
+        id: "T6_Q03",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Calculating Rates & Tangents",
+        stem: "Marble chips react with hydrochloric acid on a digital balance. The mass decreases by 2.40 g over 2 minutes (120 seconds). What is the mean rate of reaction in g/s?",
+        formula: "2 minutes = 120 s",
+        options: ["0.020 g/s", "1.20 g/s", "50.0 g/s", "0.20 g/s"],
+        answer: 0,
+        insight: "Convert minutes to seconds first: 2 min = 120 s. Mean rate = 2.40 g &divide; 120 s = 0.020 g/s."
+      },
+      {
+        id: "T6_Q04",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Calculating Rates & Tangents",
+        stem: "On a graph of volume of gas produced (y-axis) against time (x-axis), why is the curve steepest at the very beginning (t = 0 s) and completely flat (horizontal) at the end?",
+        formula: null,
+        options: [
+          "At the start, reactant concentration is highest so the rate is fastest; when horizontal, the limiting reactant has been completely used up so the reaction has stopped (rate = 0)",
+          "At the start, the catalyst is coldest; when horizontal, the gas syringe has exploded",
+          "At the start, products are breaking down; when horizontal, equilibrium has reversed",
+          "At the start, surface area is zero; when horizontal, temperature is 100 &deg;C"
+        ],
+        answer: 0,
+        insight: "The gradient of a product-vs-time graph equals the rate of reaction: steepest at t = 0 (highest concentration/collision frequency) and zero gradient (flat) when the reaction finishes."
+      },
+      {
+        id: "T6_Q05",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Calculating Rates & Tangents",
+        stem: "What is the Higher Tier unit for rate of reaction when the quantity of reactant or product is measured in moles and time in seconds?",
+        formula: "Rate = Moles &divide; Time",
+        options: ["mol/s", "g/mol", "dm<sup>3</sup>/mol", "s/mol"],
+        answer: 0,
+        insight: "AQA Higher Tier requires students to express rate in mol/s (as well as g/s and cm<sup>3</sup>/s)."
+      },
+      {
+        id: "T6_Q06",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Calculating Rates & Tangents",
+        stem: "In a reaction, 0.045 moles of calcium carbonate reacts completely in 30 seconds. Calculate the mean rate of reaction in mol/s.",
+        formula: "Mean Rate = Moles &divide; Time",
+        options: ["0.0015 mol/s (1.5 &times; 10<sup>&minus;3</sup> mol/s)", "0.015 mol/s", "1.35 mol/s", "667 mol/s"],
+        answer: 0,
+        insight: "Mean rate = 0.045 mol &divide; 30 s = 0.0015 mol/s (1.5 &times; 10<sup>−3</sup> mol/s)."
+      },
+      {
+        id: "T6_Q07",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Calculating Rates & Tangents",
+        stem: "How do you determine the INSTANTANEOUS rate of reaction at a specific time (for example, at t = 20 s) from a curved graph of gas volume against time?",
+        formula: "Gradient = &Delta;y &divide; &Delta;x",
+        options: [
+          "Draw a straight tangent line touching the curve at t = 20 s and calculate the gradient (&Delta;y &divide; &Delta;x) of that tangent",
+          "Divide the volume reading at t = 20 s directly by 20 s",
+          "Connect (0, 0) to the final flat point of the graph and find the slope",
+          "Multiply the volume at t = 20 s by 20 s"
+        ],
+        answer: 0,
+        insight: "Dividing volume at t = 20 s by 20 s gives the MEAN rate from 0 to 20 s; to find the rate AT t = 20 s, you must draw a tangent to the curve and find its gradient (&Delta;y &divide; &Delta;x)."
+      },
+      {
+        id: "T6_Q08",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Calculating Rates & Tangents",
+        stem: "A tangent drawn to a gas-volume vs. time curve at t = 15 s passes through the points (5 s, 14 cm<sup>3</sup>) and (35 s, 74 cm<sup>3</sup>). Calculate the rate of reaction at t = 15 s.",
+        formula: "Gradient = (y<sub>2</sub> &minus; y<sub>1</sub>) &divide; (x<sub>2</sub> &minus; x<sub>1</sub>)",
+        options: ["2.0 cm<sup>3</sup>/s", "2.47 cm<sup>3</sup>/s", "0.50 cm<sup>3</sup>/s", "4.93 cm<sup>3</sup>/s"],
+        answer: 0,
+        insight: "&Delta;y = 74 &minus; 14 = 60 cm<sup>3</sup>. &Delta;x = 35 &minus; 5 = 30 s. Rate (gradient) = 60 &divide; 30 = 2.0 cm<sup>3</sup>/s."
+      },
+      {
+        id: "T6_Q09",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Calculating Rates & Tangents",
+        stem: "A tangent drawn to a mass-loss vs. time curve at t = 25 s starts at (0 s, 102.4 g) and ends at (50 s, 100.9 g). What is the rate of mass loss at t = 25 s?",
+        formula: "Rate = |&Delta;Mass| &divide; &Delta;Time",
+        options: ["0.030 g/s", "0.060 g/s", "2.05 g/s", "33.3 g/s"],
+        answer: 0,
+        insight: "Change in mass = 102.4 &minus; 100.9 = 1.5 g over 50 s. Rate = 1.5 &divide; 50 = 0.030 g/s."
+      },
+      {
+        id: "T6_Q10",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Calculating Rates & Tangents",
+        stem: "Curve X shows 0.2 g of magnesium reacting with excess 1.0 mol/dm<sup>3</sup> HCl. Curve Y shows 0.2 g of magnesium reacting with excess 2.0 mol/dm<sup>3</sup> HCl at the same temperature. How do the two curves compare?",
+        formula: "Mg(s) + 2HCl(aq) &rarr; MgCl<sub>2</sub>(aq) + H<sub>2</sub>(g)",
+        options: [
+          "Curve Y is steeper at the start and levels off sooner, but BOTH curves finish at the exact same final volume of hydrogen gas",
+          "Curve Y produces double the final volume of hydrogen gas",
+          "Curve Y is less steep and finishes at half the final volume",
+          "Both curves have identical gradients throughout"
+        ],
+        answer: 0,
+        insight: "Because 0.2 g of magnesium is the limiting reactant in both experiments, the total moles (and final volume) of H<sub>2</sub> produced is identical—only the rate (steepness) increases with higher acid concentration."
+      },
+      {
+        id: "T6_Q11",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Calculating Rates & Tangents",
+        stem: "In an experiment, 0.48 g of magnesium (A<sub>r</sub> = 24) reacts completely with excess hydrochloric acid in 40 seconds. Calculate the mean rate of reaction in mol/s.",
+        formula: "Moles = Mass &divide; A<sub>r</sub> &nbsp;|&nbsp; Rate = Moles &divide; Time",
+        options: [
+          "5.0 &times; 10<sup>&minus;4</sup> mol/s (0.00050 mol/s)",
+          "0.012 mol/s",
+          "0.020 mol/s",
+          "2.0 &times; 10<sup>&minus;3</sup> mol/s"
+        ],
+        answer: 0,
+        insight: "Moles of Mg = 0.48 &divide; 24 = 0.020 mol. Mean rate = 0.020 mol &divide; 40 s = 0.00050 mol/s (5.0 &times; 10<sup>−4</sup> mol/s)."
+      },
+      {
+        id: "T6_Q12",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Calculating Rates & Tangents",
+        stem: "A student records the gas produced in a reaction at 10 s intervals: 0 s: 0 cm<sup>3</sup>; 10 s: 22 cm<sup>3</sup>; 20 s: 38 cm<sup>3</sup>; 30 s: 48 cm<sup>3</sup>; 40 s: 52 cm<sup>3</sup>; 50 s: 52 cm<sup>3</sup>. During which 10-second interval was the reaction fastest?",
+        formula: null,
+        options: ["0 s to 10 s (22 cm<sup>3</sup> formed)", "10 s to 20 s (16 cm<sup>3</sup> formed)", "20 s to 30 s (10 cm<sup>3</sup> formed)", "40 s to 50 s (0 cm<sup>3</sup> formed)"],
+        answer: 0,
+        insight: "The largest volume of gas per 10 seconds (22 cm<sup>3</sup> in 10 s = 2.2 cm<sup>3</sup>/s) occurred during the first 10 seconds when reactant concentration was highest."
+      },
+
+      // ========================================================================
+      // 2. FACTORS AFFECTING RATE & COLLISION THEORY (12 Questions)
+      // ========================================================================
+      {
+        id: "T6_Q13",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Factors Affecting Rate & Collision Theory",
+        stem: "According to collision theory, what TWO conditions are required for a chemical reaction to occur between reactant particles?",
+        formula: null,
+        options: [
+          "The particles must collide with each other AND collide with at least the activation energy (E<sub>a</sub>)",
+          "The particles must be solids AND have the same atomic mass",
+          "The particles must collide slowly AND be dissolved in water",
+          "A catalyst must be present AND the pressure must be 100 atm"
+        ],
+        answer: 0,
+        insight: "AQA collision theory definition: Chemical reactions can occur only when reacting particles collide with each other and with sufficient energy (equal to or greater than the activation energy)."
+      },
+      {
+        id: "T6_Q14",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Factors Affecting Rate & Collision Theory",
+        stem: "Which list contains ALL FIVE factors that affect the rate of a chemical reaction in AQA GCSE Chemistry?",
+        formula: null,
+        options: [
+          "Temperature, concentration of solutions, pressure of reacting gases, surface area of solid reactants, and presence of a catalyst",
+          "Temperature, colour of beaker, atmospheric humidity, mass of balance, and boiling point",
+          "Concentration, pH of water, density of glass, volume of room, and gravity",
+          "Surface area, magnetic field, atomic number, isotope mass, and melting point"
+        ],
+        answer: 0,
+        insight: "The five AQA rate factors: (1) temperature, (2) concentration in solution, (3) pressure of gases, (4) surface area of solids, and (5) catalysts."
+      },
+      {
+        id: "T6_Q15",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Factors Affecting Rate & Collision Theory",
+        stem: "Using collision theory, explain why increasing the CONCENTRATION of an acid increases the rate of reaction with magnesium.",
+        formula: null,
+        options: [
+          "There are more acid particles per unit volume, so particles are closer together and the frequency of successful collisions increases",
+          "Each acid particle moves faster and has higher kinetic energy",
+          "The activation energy of the reaction decreases",
+          "The surface area of the magnesium increases"
+        ],
+        answer: 0,
+        insight: "Higher concentration = more particles in the same volume = more frequent collisions per second (collision frequency increases)."
+      },
+      {
+        id: "T6_Q16",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Factors Affecting Rate & Collision Theory",
+        stem: "Using collision theory, explain why increasing the TEMPERATURE increases the rate of a chemical reaction so dramatically.",
+        formula: null,
+        options: [
+          "Particles move faster (increasing collision frequency) AND a much greater proportion of colliding particles have energy equal to or greater than the activation energy (E<sub>a</sub>)",
+          "Increasing temperature lowers the activation energy of the reaction",
+          "Increasing temperature increases the number of atoms in the flask",
+          "Particles expand in size so they are harder to miss"
+        ],
+        answer: 0,
+        insight: "AQA 2-mark explanation for temperature: (1) particles move faster so collide more frequently, AND (2) particles collide with more energy, so a higher proportion of collisions exceed the activation energy."
+      },
+      {
+        id: "T6_Q17",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Factors Affecting Rate & Collision Theory",
+        stem: "Why does crushing large marble lumps into fine calcium carbonate powder make them react much faster with dilute hydrochloric acid?",
+        formula: "CaCO<sub>3</sub>(s) + 2HCl(aq) &rarr; CaCl<sub>2</sub>(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)",
+        options: [
+          "Crushing increases the surface area to volume ratio (SA:V), exposing more solid particles to the acid so the frequency of collisions increases",
+          "Powdered calcium carbonate has a lower activation energy than lumps",
+          "Crushing heats up the acid by 50 &deg;C",
+          "Powdered marble contains more moles of CaCO<sub>3</sub> per gram"
+        ],
+        answer: 0,
+        insight: "Breaking a solid into smaller pieces increases its surface area to volume ratio, allowing more frequent collisions at the solid-liquid interface."
+      },
+      {
+        id: "T6_Q18",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Factors Affecting Rate & Collision Theory",
+        stem: "How does increasing the PRESSURE of reacting gases increase the rate of reaction?",
+        formula: null,
+        options: [
+          "It pushes the same number of gas molecules into a smaller volume (more particles per unit volume), increasing the frequency of collisions",
+          "It lowers the activation energy of the gas molecules",
+          "It turns the gas molecules into liquid droplets",
+          "It decreases the kinetic energy of the molecules"
+        ],
+        answer: 0,
+        insight: "For gases, increasing pressure has the exact same particle-level effect as increasing concentration in solution: more particles per unit volume &rarr; higher collision frequency."
+      },
+      {
+        id: "T6_Q19",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Factors Affecting Rate & Collision Theory",
+        stem: "A cube of solid reactant has sides of length 2 cm (Surface Area = 24 cm<sup>2</sup>, Volume = 8 cm<sup>3</sup>). It is cut into eight smaller cubes each of side 1 cm (Total Surface Area = 48 cm<sup>2</sup>, Volume = 8 cm<sup>3</sup>). How does the surface area to volume ratio change?",
+        formula: "SA : V Ratio",
+        options: [
+          "It doubles from 3 : 1 to 6 : 1",
+          "It halves from 6 : 1 to 3 : 1",
+          "It stays constant at 3 : 1",
+          "It increases by a factor of 8"
+        ],
+        answer: 0,
+        insight: "Original SA:V = 24 : 8 = 3 : 1. After cutting into 1 cm cubes, SA:V = 48 : 8 = 6 : 1—doubling the exposed surface area per unit volume."
+      },
+      {
+        id: "T6_Q20",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Factors Affecting Rate & Collision Theory",
+        stem: "Which factor increases the rate of reaction WITHOUT increasing the frequency of collisions between reactant particles?",
+        formula: null,
+        options: [
+          "Adding a catalyst (which lowers the activation energy so a higher proportion of collisions are successful)",
+          "Increasing the temperature",
+          "Increasing the concentration of acid",
+          "Grinding a solid into a fine powder"
+        ],
+        answer: 0,
+        insight: "Concentration, pressure, and surface area increase collision frequency; temperature increases both frequency and energy; a catalyst increases the success rate of existing collisions by lowering E<sub>a</sub>."
+      },
+      {
+        id: "T6_Q21",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Factors Affecting Rate & Collision Theory",
+        stem: "Why can fine custard powder or flour suspended in air inside a flour mill cause a violent dust explosion if a spark occurs?",
+        formula: null,
+        options: [
+          "The tiny dust particles have a huge surface area to volume ratio in contact with oxygen in the air, causing an extremely rapid combustion reaction",
+          "Flour acts as a catalyst that decomposes nitrogen gas",
+          "Custard powder is denser than lead",
+          "Fine dust lowers the temperature of the room below freezing"
+        ],
+        answer: 0,
+        insight: "Fine combustible dust suspended in air has an enormous surface area to volume ratio, leading to an almost instantaneous rate of oxidation when ignited."
+      },
+      {
+        id: "T6_Q22",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Factors Affecting Rate & Collision Theory",
+        stem: "If the concentration of a reactant is doubled, why does the rate of reaction roughly double?",
+        formula: null,
+        options: [
+          "There are twice as many reactant particles in the same volume, so twice as many collisions occur per second",
+          "Each collision releases twice as much thermal energy",
+          "The activation energy is halved",
+          "The reaction time doubles"
+        ],
+        answer: 0,
+        insight: "Collision frequency is directly proportional to concentration: doubling particles per unit volume doubles the number of collisions per second."
+      },
+      {
+        id: "T6_Q23",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Factors Affecting Rate & Collision Theory",
+        stem: "Why does milk go sour much more slowly when stored in a refrigerator at 4 &deg;C than when left on a kitchen worktop at 22 &deg;C?",
+        formula: null,
+        options: [
+          "At lower temperatures, particles move more slowly and fewer collisions have energy equal to or greater than the activation energy, slowing chemical/bacterial reactions",
+          "Refrigerators remove all oxygen from inside the milk carton",
+          "Low temperatures increase the activation energy of souring",
+          "Milk turns into a solid block of ice at 4 &deg;C"
+        ],
+        answer: 0,
+        insight: "Cooling reduces particle kinetic energy, lowering both collision frequency and the fraction of collisions exceeding E<sub>a</sub>."
+      },
+      {
+        id: "T6_Q24",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Factors Affecting Rate & Collision Theory",
+        stem: "When explaining why higher temperature speeds up a reaction, why do AQA examiners advise students to write 'more frequent collisions' rather than simply 'more collisions'?",
+        formula: null,
+        options: [
+          "Because 'more collisions' without mentioning time ('per second' or 'more frequent') could just mean the reaction lasts longer rather than happening faster",
+          "Because total collisions actually decrease at high temperature",
+          "Because 'frequent' means the particles are larger",
+          "Because collisions only occur once per minute"
+        ],
+        answer: 0,
+        insight: "Examiner tip: Rate is collisions PER UNIT TIME. Always use the phrase 'more frequent collisions' (or 'more collisions per second')!"
+      },
+
+      // ========================================================================
+      // 3. CATALYSTS & ACTIVATION ENERGY (10 Questions)
+      // ========================================================================
+      {
+        id: "T6_Q25",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Catalysts & Activation Energy",
+        stem: "What is a CATALYST?",
+        formula: null,
+        options: [
+          "A substance that increases the rate of a chemical reaction without being chemically changed or used up in the reaction",
+          "A reactant that increases the total mass of product formed",
+          "A chemical that raises the temperature of the solution by 20 &deg;C",
+          "A substance that stops a reversible reaction from reaching equilibrium"
+        ],
+        answer: 0,
+        insight: "A catalyst speeds up a reaction, is not used up (its mass at the end equals its mass at the start), and is therefore not included in the chemical equation."
+      },
+      {
+        id: "T6_Q26",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Catalysts & Activation Energy",
+        stem: "HOW does a catalyst increase the rate of a chemical reaction?",
+        formula: null,
+        options: [
+          "It provides an alternative reaction pathway that has a LOWER activation energy (E<sub>a</sub>), so a greater proportion of colliding particles have enough energy to react",
+          "It gives reactant particles extra kinetic energy so they move faster",
+          "It increases the concentration of the reactants",
+          "It makes the overall energy change (&Delta;H) more exothermic"
+        ],
+        answer: 0,
+        insight: "AQA standard mark-scheme answer: A catalyst provides a different pathway for the reaction that has a lower activation energy."
+      },
+      {
+        id: "T6_Q27",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Catalysts & Activation Energy",
+        stem: "What are ENZYMES?",
+        formula: null,
+        options: [
+          "Biological catalysts (protein molecules) that speed up chemical reactions in living cells",
+          "Transition metal alloys used in car exhausts",
+          "Inorganic acids that dissolve limestone",
+          "Fossil fuels burned in power stations"
+        ],
+        answer: 0,
+        insight: "Enzymes act as biological catalysts in living organisms (for example, yeast enzymes catalyse the fermentation of glucose into ethanol)."
+      },
+      {
+        id: "T6_Q28",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Catalysts & Activation Energy",
+        stem: "Manganese(IV) oxide (MnO<sub>2</sub>) catalyses the decomposition of hydrogen peroxide into water and oxygen. If 0.50 g of MnO<sub>2</sub> is added at the start, what mass of MnO<sub>2</sub> can be recovered by filtration at the end?",
+        formula: "2H<sub>2</sub>O<sub>2</sub>(aq) &rarr; 2H<sub>2</sub>O(l) + O<sub>2</sub>(g)",
+        options: ["0.50 g (unchanged)", "0.00 g (all used up)", "1.00 g (doubled)", "0.25 g (halved)"],
+        answer: 0,
+        insight: "Because a catalyst is not chemically used up during the reaction, its exact starting mass (0.50 g) remains at the end and can be reused."
+      },
+      {
+        id: "T6_Q29",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Catalysts & Activation Energy",
+        stem: "Why are catalysts economically and environmentally valuable in industrial chemical processes?",
+        formula: null,
+        options: [
+          "They allow reactions to proceed rapidly at lower temperatures and pressures, reducing energy costs and burning fewer fossil fuels",
+          "They turn waste carbon dioxide into pure gold",
+          "They double the theoretical maximum yield of product",
+          "They eliminate the need to buy any raw materials"
+        ],
+        answer: 0,
+        insight: "Lower operating temperatures save huge energy costs and reduce CO<sub>2</sub> emissions, and catalysts can be reused repeatedly."
+      },
+      {
+        id: "T6_Q30",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Catalysts & Activation Energy",
+        stem: "Which statement about catalysts is TRUE?",
+        formula: null,
+        options: [
+          "Different reactions require different catalysts (catalysts are specific to particular reactions)",
+          "A single universal catalyst works equally well for every chemical reaction",
+          "Adding a catalyst increases the final volume of gas produced from a fixed mass of reactant",
+          "Catalysts are written on the left-hand side of a balanced symbol equation as reactants"
+        ],
+        answer: 0,
+        insight: "Different reactions need different catalysts (e.g., iron in the Haber process, vanadium(V) oxide in the Contact process, platinum/rhodium in catalytic converters)."
+      },
+      {
+        id: "T6_Q31",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Catalysts & Activation Energy",
+        stem: "On a reaction profile diagram, how does the curve for a CATALYSED reaction differ from the UNCATALYSED reaction?",
+        formula: null,
+        options: [
+          "The catalysed curve starts at the same reactant energy and ends at the same product energy, but has a LOWER peak (lower activation energy)",
+          "The catalysed curve starts at a higher reactant energy and ends at a lower product energy",
+          "The catalysed curve has a higher peak than the uncatalysed curve",
+          "The catalysed curve has no peak at all"
+        ],
+        answer: 0,
+        insight: "Reactant and product energy levels (&Delta;H) are unchanged; only the activation energy barrier (peak height) is lowered."
+      },
+      {
+        id: "T6_Q32",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Catalysts & Activation Energy",
+        stem: "In a car's catalytic converter, transition metals (platinum, palladium, and rhodium) are coated onto a ceramic honeycomb structure. Why is a honeycomb structure used?",
+        formula: "2CO + 2NO &rarr; 2CO<sub>2</sub> + N<sub>2</sub>",
+        options: [
+          "To provide a very large surface area for exhaust gases to contact the catalyst while keeping the cost of precious metals low",
+          "To trap all carbon dioxide inside the exhaust pipe",
+          "To cool the exhaust gases below 0 &deg;C",
+          "To dissolve the honeycomb into the petrol"
+        ],
+        answer: 0,
+        insight: "A thin layer of expensive transition metal catalyst spread over a honeycomb support maximises surface area for fast gas reactions."
+      },
+      {
+        id: "T6_Q33",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Catalysts & Activation Energy",
+        stem: "A student decomposes 50 cm<sup>3</sup> of hydrogen peroxide with 0.2 g of MnO<sub>2</sub> catalyst and collects 60 cm<sup>3</sup> of oxygen in 30 s. If they repeat the experiment with 0.4 g of powdered MnO<sub>2</sub>, what happens?",
+        formula: "2H<sub>2</sub>O<sub>2</sub>(aq) &rarr; 2H<sub>2</sub>O(l) + O<sub>2</sub>(g)",
+        options: [
+          "The 60 cm<sup>3</sup> of oxygen is produced faster (in less than 30 s), but the total volume of oxygen stays 60 cm<sup>3</sup>",
+          "120 cm<sup>3</sup> of oxygen is produced in 30 s",
+          "30 cm<sup>3</sup> of oxygen is produced in 60 s",
+          "The reaction stops completely"
+        ],
+        answer: 0,
+        insight: "More catalyst surface area increases the rate, so the reaction finishes sooner, but the fixed 50 cm<sup>3</sup> of H<sub>2</sub>O<sub>2</sub> still yields the exact same 60 cm<sup>3</sup> of O<sub>2</sub>."
+      },
+      {
+        id: "T6_Q34",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Catalysts & Activation Energy",
+        stem: "In a reversible reaction at dynamic equilibrium, how does adding a catalyst affect the forward and reverse reaction rates?",
+        formula: "A + B &#8652; C + D",
+        options: [
+          "It increases the rate of BOTH the forward and reverse reactions equally, so equilibrium is reached faster without changing the equilibrium yield",
+          "It speeds up only the forward reaction and doubles the yield of products",
+          "It slows down the reverse reaction to zero",
+          "It shifts the equilibrium position to the endothermic side"
+        ],
+        answer: 0,
+        insight: "Because a catalyst lowers the peak from both directions by the same amount, forward and reverse rates increase equally—reaching equilibrium faster with zero shift in position."
+      },
+
+      // ========================================================================
+      // 4. REQUIRED PRACTICAL 5: RATES OF REACTION (14 Questions)
+      // ========================================================================
+      {
+        id: "T6_Q35",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "In Required Practical 5 (Method B: Disappearing Cross), dilute hydrochloric acid is added to sodium thiosulfate solution in a conical flask standing over a black cross. What causes the black cross to disappear from view?",
+        formula: "Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub>(aq) + 2HCl(aq) &rarr; 2NaCl(aq) + H<sub>2</sub>O(l) + SO<sub>2</sub>(g) + S(s)",
+        options: [
+          "An insoluble yellow precipitate of solid sulfur (S(s)) forms, making the solution cloudy/turbid until light can no longer pass through",
+          "Bubbles of hydrogen gas cover the bottom of the flask",
+          "The hydrochloric acid bleaches the black ink on the paper",
+          "A dark blue iodine-starch complex forms"
+        ],
+        answer: 0,
+        insight: "AQA RP5 Method B must-know: solid sulfur precipitate (S(s)) causes turbidity (cloudiness), obscuring the cross beneath the conical flask."
+      },
+      {
+        id: "T6_Q36",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "In Required Practical 5 (Disappearing Cross method), a student investigates how changing the concentration of sodium thiosulfate affects the rate of reaction. Identify the independent and dependent variables.",
+        formula: null,
+        options: [
+          "Independent variable: concentration of sodium thiosulfate; Dependent variable: time taken for the black cross to disappear",
+          "Independent variable: time taken for the cross to disappear; Dependent variable: concentration of sodium thiosulfate",
+          "Independent variable: volume of HCl; Dependent variable: size of conical flask",
+          "Independent variable: temperature of room; Dependent variable: mass of sulfur"
+        ],
+        answer: 0,
+        insight: "The concentration of sodium thiosulfate is deliberately changed (independent), and the time until the cross is obscured is measured with a stopwatch (dependent)."
+      },
+      {
+        id: "T6_Q37",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "In the Disappearing Cross experiment (RP5), why is it essential to keep the TOTAL volume of solution in the conical flask constant (by topping up with distilled water when using lower concentrations of sodium thiosulfate)?",
+        formula: null,
+        options: [
+          "To keep the depth of liquid in the conical flask constant so the same amount of sulfur precipitate is needed to obscure the cross in every trial",
+          "Because distilled water acts as a catalyst for the reaction",
+          "To prevent the conical flask from overheating",
+          "Because hydrochloric acid only reacts when diluted 10 times"
+        ],
+        answer: 0,
+        insight: "Keeping the total liquid depth constant ensures a fair test: if the depth changed, you would be looking through a shallower or deeper layer of cloudy suspension."
+      },
+      {
+        id: "T6_Q38",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "What is the main source of HUMAN/RANDOM ERROR in the Disappearing Cross method (RP5), and how can it be reduced?",
+        formula: null,
+        options: [
+          "Judging the exact moment the cross disappears is subjective; it can be improved by using a light sensor / colorimeter connected to a data logger to measure light transmission",
+          "The gas syringe sticks; it can be improved by oiling the glass",
+          "Sulfur gas escapes; it can be improved by sealing the flask tightly with a rubber bung",
+          "The thermometer breaks; it can be improved by using a ruler"
+        ],
+        answer: 0,
+        insight: "Different people judge when the cross vanishes slightly differently (subjective end-point). A light sensor/data logger removes human judgment error."
+      },
+      {
+        id: "T6_Q39",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "Why should the Disappearing Cross experiment (RP5) be carried out in a well-ventilated room or fume cupboard, and why should the mixture be poured into a sodium carbonate bath straight after timing?",
+        formula: "Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub> + 2HCl &rarr; 2NaCl + H<sub>2</sub>O + SO<sub>2</sub>(g) + S(s)",
+        options: [
+          "Toxic sulfur dioxide gas (SO<sub>2</sub>) is produced, which can trigger asthma/respiratory irritation",
+          "Explosive hydrogen gas is produced in large volumes",
+          "Toxic chlorine gas bleaches the laboratory walls",
+          "Carbon monoxide is released from the glass flask"
+        ],
+        answer: 0,
+        insight: "AQA safety question for RP5: sulfur dioxide (SO<sub>2</sub>) is a toxic choking gas that irritates the lungs and triggers asthma."
+      },
+      {
+        id: "T6_Q40",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "In the Disappearing Cross experiment (RP5), how is the relative rate of reaction calculated from the measured time (t) for the cross to disappear?",
+        formula: "Relative Rate",
+        options: [
+          "Relative rate = 1 &divide; time (in s<sup>&minus;1</sup>)",
+          "Relative rate = time &times; 100",
+          "Relative rate = temperature &divide; time",
+          "Relative rate = time &divide; volume"
+        ],
+        answer: 0,
+        insight: "Because the same fixed amount of sulfur obscures the cross in each run, relative rate is inversely proportional to time: Rate = 1 / t (s<sup>−1</sup>)."
+      },
+      {
+        id: "T6_Q41",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "In Required Practical 5 (Method A: Measuring Gas Volume), magnesium ribbon reacts with dilute hydrochloric acid in a conical flask connected to a gas syringe. What is a common systematic error at the very start of the experiment?",
+        formula: "Mg(s) + 2HCl(aq) &rarr; MgCl<sub>2</sub>(aq) + H<sub>2</sub>(g)",
+        options: [
+          "Some hydrogen gas escapes from the flask before the rubber bung is inserted tightly, making the recorded gas volume slightly lower than expected",
+          "Air dissolves into the magnesium ribbon and doubles its mass",
+          "Hydrogen gas is heavier than air and sinks to the bottom of the flask",
+          "The gas syringe turns hydrogen into liquid water"
+        ],
+        answer: 0,
+        insight: "Inserting the bung quickly (or using a divided flask / suspended small tube tipped over after sealing) prevents initial gas loss."
+      },
+      {
+        id: "T6_Q42",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "In Required Practical 5 (Method A), what is an alternative way to collect and measure the volume of hydrogen gas produced if a gas syringe is not available?",
+        formula: null,
+        options: [
+          "Bubble the gas via a delivery tube into an upturned (inverted) measuring cylinder filled with water in a trough",
+          "Collect the gas in an open dry beaker on the bench",
+          "Measure the pH change with universal indicator paper",
+          "Weigh the gas syringe on a top-pan balance"
+        ],
+        answer: 0,
+        insight: "Collection over water in an inverted measuring cylinder works well for insoluble/sparingly soluble gases like hydrogen (H<sub>2</sub>)."
+      },
+      {
+        id: "T6_Q43",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "Why is an inverted measuring cylinder filled with water NOT suitable for accurately measuring the volume of carbon dioxide or sulfur dioxide gas in a rate experiment?",
+        formula: null,
+        options: [
+          "Carbon dioxide and sulfur dioxide are appreciably soluble in water, so some gas dissolves instead of displacing water in the cylinder",
+          "Carbon dioxide explodes on contact with tap water",
+          "Measuring cylinders have no volume scale markings",
+          "Water reacts with glass to form oxygen"
+        ],
+        answer: 0,
+        insight: "A gas syringe is preferred for CO<sub>2</sub> or SO<sub>2</sub> because both gases dissolve in water, which would cause an underestimate of gas volume."
+      },
+      {
+        id: "T6_Q44",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "In Required Practical 5 (Method A: Mg + HCl), a student tests 0.5, 1.0, 1.5, and 2.0 mol/dm<sup>3</sup> HCl. Which control variables must be kept constant?",
+        formula: null,
+        options: [
+          "Length/mass and surface area of magnesium ribbon, volume of HCl, and starting temperature",
+          "Volume of hydrogen gas collected every 10 seconds",
+          "Concentration of hydrochloric acid",
+          "Gradient of the tangent at 20 seconds"
+        ],
+        answer: 0,
+        insight: "To isolate the effect of acid concentration, the mass/surface area of magnesium, volume of acid, and temperature must all be kept identical."
+      },
+      {
+        id: "T6_Q45",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "In the Disappearing Cross experiment (RP5), a student records times of 42 s at 20 &deg;C, 21 s at 30 &deg;C, and 11 s at 40 &deg;C. What pattern does this data show?",
+        formula: null,
+        options: [
+          "Increasing temperature by 10 &deg;C roughly halves the reaction time, meaning the rate of reaction roughly doubles",
+          "Increasing temperature makes the reaction take twice as long",
+          "Temperature has no effect on the time taken for the cross to disappear",
+          "The reaction stops completely above 30 &deg;C"
+        ],
+        answer: 0,
+        insight: "Halving the reaction time (42 s &rarr; 21 s &rarr; 11 s) means the reaction rate is doubling for every 10 &deg;C temperature rise."
+      },
+      {
+        id: "T6_Q46",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "When investigating temperature in the Disappearing Cross experiment (RP5), why must the sodium thiosulfate solution and the hydrochloric acid be warmed in a water bath BEFORE mixing them together?",
+        formula: null,
+        options: [
+          "So both solutions are already at the target temperature at the exact moment the reaction starts, and the temperature is recorded immediately after mixing",
+          "Because cold hydrochloric acid dissolves the glass beaker",
+          "To boil away all the water before adding sodium thiosulfate",
+          "To make the black cross turn red"
+        ],
+        answer: 0,
+        insight: "Pre-warming both solutions ensures the reaction proceeds at the intended temperature right from t = 0 s."
+      },
+      {
+        id: "T6_Q47",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "In RP5 (Method A), a student uses a 100 cm<sup>3</sup> gas syringe with 1 cm<sup>3</sup> divisions. If the reaction produces 115 cm<sup>3</sup> of hydrogen gas, what problem occurs and how should it be solved?",
+        formula: null,
+        options: [
+          "The plunger will be pushed right out of the end of the 100 cm<sup>3</sup> syringe; reduce the mass of magnesium or use a larger capacity syringe",
+          "The gas will compress itself to 50 cm<sup>3</sup> automatically",
+          "The reaction will reverse back into magnesium ribbon",
+          "Add more hydrochloric acid to absorb the extra 15 cm<sup>3</sup>"
+        ],
+        answer: 0,
+        insight: "Before starting, calculate expected gas volume (or run a trial) so it stays within the 100 cm<sup>3</sup> range of the gas syringe."
+      },
+      {
+        id: "T6_Q48",
+        tiers: ["higher", "separate"],
+        focus: ["all", "rp5"],
+        topic: "Required Practical 5: Rates of Reaction",
+        stem: "In RP5 (Method A), a student plots gas volume (cm<sup>3</sup>) against time (s) and draws a tangent at t = 10 s passing through (0 s, 8 cm<sup>3</sup>) and (20 s, 58 cm<sup>3</sup>). What is the rate at t = 10 s?",
+        formula: "Rate = &Delta;Volume &divide; &Delta;Time",
+        options: ["2.5 cm<sup>3</sup>/s", "5.8 cm<sup>3</sup>/s", "0.40 cm<sup>3</sup>/s", "3.3 cm<sup>3</sup>/s"],
+        answer: 0,
+        insight: "&Delta;Volume = 58 &minus; 8 = 50 cm<sup>3</sup>. &Delta;Time = 20 &minus; 0 = 20 s. Rate = 50 &divide; 20 = 2.5 cm<sup>3</sup>/s."
+      },
+
+      // ========================================================================
+      // 5. REVERSIBLE REACTIONS & DYNAMIC EQUILIBRIUM (12 Questions)
+      // ========================================================================
+      {
+        id: "T6_Q49",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reversible Reactions & Dynamic Equilibrium",
+        stem: "What does the double half-arrow symbol (&#8652;) in a chemical equation represent?",
+        formula: "A + B &#8652; C + D",
+        options: [
+          "A reversible reaction—the products of the reaction can react together to produce the original reactants",
+          "A reaction that occurs only in one direction at 100 &deg;C",
+          "A reaction that requires two different catalysts",
+          "A reaction in which atoms are destroyed"
+        ],
+        answer: 0,
+        insight: "In a reversible reaction, forward (A + B &rarr; C + D) and reverse (C + D &rarr; A + B) reactions can both occur."
+      },
+      {
+        id: "T6_Q50",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reversible Reactions & Dynamic Equilibrium",
+        stem: "When blue hydrated copper(II) sulfate crystals are heated gently, they turn into white anhydrous copper(II) sulfate powder and steam. How can this reaction be reversed?",
+        formula: "CuSO<sub>4</sub>&middot;5H<sub>2</sub>O(s) &#8652; CuSO<sub>4</sub>(s) + 5H<sub>2</sub>O(l)",
+        options: [
+          "Add water to the white anhydrous copper(II) sulfate—it turns back into blue hydrated crystals and releases heat (exothermic)",
+          "Heat the white powder even more strongly to 1000 &deg;C",
+          "Pass carbon dioxide gas over the white powder",
+          "Place the white powder in a vacuum flask"
+        ],
+        answer: 0,
+        insight: "Heating hydrated CuSO<sub>4</sub>&middot;5H<sub>2</sub>O is endothermic (blue &rarr; white); adding water is exothermic (white &rarr; blue), which is also used as a chemical test for water."
+      },
+      {
+        id: "T6_Q51",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reversible Reactions & Dynamic Equilibrium",
+        stem: "When solid ammonium chloride is heated in a test tube, it decomposes into ammonia gas and hydrogen chloride gas, which recombine higher up the cool tube to reform white solid ammonium chloride. Write the equation.",
+        formula: "Ammonium chloride &#8652; Ammonia + Hydrogen chloride",
+        options: [
+          "NH<sub>4</sub>Cl(s) &#8652; NH<sub>3</sub>(g) + HCl(g)",
+          "NH<sub>4</sub>Cl(s) &#8652; N<sub>2</sub>(g) + 2H<sub>2</sub>(g) + Cl<sub>2</sub>(g)",
+          "NH<sub>3</sub>Cl(s) &#8652; NH<sub>3</sub>(g) + Cl<sub>2</sub>(g)",
+          "2NH<sub>4</sub>Cl(s) &#8652; N<sub>2</sub>H<sub>4</sub>(g) + 2HCl(g)"
+        ],
+        answer: 0,
+        insight: "Thermal decomposition of ammonium chloride: NH<sub>4</sub>Cl(s) &#8652; NH<sub>3</sub>(g) + HCl(g) (endothermic forward, exothermic reverse)."
+      },
+      {
+        id: "T6_Q52",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reversible Reactions & Dynamic Equilibrium",
+        stem: "In a reversible reaction, the forward reaction is exothermic and releases 92 kJ/mol of energy. What is the energy change for the reverse reaction?",
+        formula: "N<sub>2</sub>(g) + 3H<sub>2</sub>(g) &#8652; 2NH<sub>3</sub>(g) &nbsp;|&nbsp; &Delta;H = &minus;92 kJ/mol",
+        options: [
+          "Endothermic, absorbing exactly 92 kJ/mol (+92 kJ/mol)",
+          "Exothermic, releasing 92 kJ/mol (&minus;92 kJ/mol)",
+          "Endothermic, absorbing 184 kJ/mol (+184 kJ/mol)",
+          "Zero energy change (0 kJ/mol)"
+        ],
+        answer: 0,
+        insight: "If a reversible reaction is exothermic in one direction, it is endothermic in the opposite direction, and the exact same amount of energy is transferred in each case."
+      },
+      {
+        id: "T6_Q53",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reversible Reactions & Dynamic Equilibrium",
+        stem: "Which two statements are BOTH true when a reversible reaction reaches DYNAMIC EQUILIBRIUM in a closed system?",
+        formula: null,
+        options: [
+          "The rate of the forward reaction equals the rate of the reverse reaction, AND the amounts/concentrations of reactants and products remain constant",
+          "Both the forward and reverse reactions have completely stopped, AND the concentrations of reactants and products are always 50% : 50%",
+          "Only the forward reaction is occurring, AND gases are escaping from the flask",
+          "The forward rate is double the reverse rate, AND products are continuously increasing"
+        ],
+        answer: 0,
+        insight: "AQA definition of dynamic equilibrium: (1) forward and reverse reactions occur at the exact same rate, and (2) macroscopic amounts/concentrations of all reactants and products stay constant (not necessarily equal!)."
+      },
+      {
+        id: "T6_Q54",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reversible Reactions & Dynamic Equilibrium",
+        stem: "Why can dynamic equilibrium ONLY be reached in a CLOSED SYSTEM?",
+        formula: null,
+        options: [
+          "Because in a closed system no reactants or products can enter or escape, allowing the reverse reaction to proceed alongside the forward reaction",
+          "Because chemical reactions cannot happen in open beakers",
+          "Because catalysts only work when sealed in glass",
+          "Because atmospheric pressure is zero inside a closed system"
+        ],
+        answer: 0,
+        insight: "If a gaseous product escapes from an open container (e.g., CaCO<sub>3</sub> &rarr; CaO + CO<sub>2</sub> in an open tube), the reverse reaction cannot take place and equilibrium is never reached."
+      },
+      {
+        id: "T6_Q55",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reversible Reactions & Dynamic Equilibrium",
+        stem: "At dynamic equilibrium, why is the word 'DYNAMIC' used?",
+        formula: null,
+        options: [
+          "Because both the forward and reverse reactions are still continuing to happen at equal speeds, even though overall concentrations look constant",
+          "Because the temperature is constantly oscillating up and down",
+          "Because the flask is shaken violently by a machine",
+          "Because all reactants have turned into gases"
+        ],
+        answer: 0,
+        insight: "'Dynamic' means ongoing microscopic motion/reaction: reactants continue forming products at the exact same rate that products break back down into reactants."
+      },
+      {
+        id: "T6_Q56",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reversible Reactions & Dynamic Equilibrium",
+        stem: "In a closed container at equilibrium, a mixture contains 70% reactants and 30% products. Which statement is correct?",
+        formula: "Reactants (70%) &#8652; Products (30%)",
+        options: [
+          "The equilibrium position lies to the left (favouring reactants), and the forward and reverse rates are equal",
+          "The system is not at equilibrium because the percentages are not 50% and 50%",
+          "The reverse reaction is faster than the forward reaction",
+          "The forward reaction has stopped"
+        ],
+        answer: 0,
+        insight: "Common misconception! At equilibrium, concentrations are CONSTANT, not necessarily 50:50. Since 70% is reactants, the equilibrium position lies to the left."
+      },
+      {
+        id: "T6_Q57",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reversible Reactions & Dynamic Equilibrium",
+        stem: "If hydrated cobalt(II) chloride (pink) is heated gently, it forms anhydrous cobalt(II) chloride (blue) and water. What colour change occurs when a drop of water is added to the blue solid?",
+        formula: "CoCl<sub>2</sub>&middot;6H<sub>2</sub>O(s) &#8652; CoCl<sub>2</sub>(s) + 6H<sub>2</sub>O(l)",
+        options: ["Blue to pink", "Pink to blue", "White to blue", "Green to yellow"],
+        answer: 0,
+        insight: "Anhydrous cobalt(II) chloride paper turns from blue to pink in the presence of water—another classic reversible hydration reaction."
+      },
+      {
+        id: "T6_Q58",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reversible Reactions & Dynamic Equilibrium",
+        stem: "Starting with pure reactants A and B in a sealed vessel (A + B &#8652; C + D), how do the forward and reverse reaction rates change from t = 0 until equilibrium is reached?",
+        formula: null,
+        options: [
+          "The forward rate starts high and decreases as A and B are used up; the reverse rate starts at zero and increases as C and D form until both rates become equal",
+          "The forward rate starts at zero and increases; the reverse rate starts high and decreases",
+          "Both forward and reverse rates stay at zero the entire time",
+          "The forward rate increases forever without levelling off"
+        ],
+        answer: 0,
+        insight: "At t = 0, [C] and [D] are zero so reverse rate = 0. As products accumulate, reverse rate speeds up while forward rate slows down until they meet at equal values."
+      },
+      {
+        id: "T6_Q59",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Reversible Reactions & Dynamic Equilibrium",
+        stem: "When calcium carbonate is heated in a SEALED rigid steel cylinder at 800 &deg;C, it reaches dynamic equilibrium: CaCO<sub>3</sub>(s) &#8652; CaO(s) + CO<sub>2</sub>(g). What happens if the lid is opened?",
+        formula: "CaCO<sub>3</sub>(s) &#8652; CaO(s) + CO<sub>2</sub>(g)",
+        options: [
+          "CO<sub>2</sub> gas escapes into the air, so the reverse reaction stops and the CaCO<sub>3</sub> decomposes completely to CaO",
+          "More CaCO<sub>3</sub> forms instantly from the air",
+          "The equilibrium stays completely unchanged",
+          "The calcium oxide turns into calcium metal"
+        ],
+        answer: 0,
+        insight: "Opening the vessel breaks the closed system; CO<sub>2</sub> escapes so the reverse reaction can no longer occur."
+      },
+      {
+        id: "T6_Q60",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reversible Reactions & Dynamic Equilibrium",
+        stem: "In the reversible reaction H<sub>2</sub>(g) + I<sub>2</sub>(g) &#8652; 2HI(g), the forward reaction absorbs 52 kJ/mol of energy. Is the reverse reaction exothermic or endothermic, and by how much?",
+        formula: null,
+        options: [
+          "Exothermic by 52 kJ/mol",
+          "Endothermic by 52 kJ/mol",
+          "Exothermic by 26 kJ/mol",
+          "Endothermic by 104 kJ/mol"
+        ],
+        answer: 0,
+        insight: "Forward is endothermic (+52 kJ/mol), so the reverse reaction must be exothermic (&minus;52 kJ/mol)."
+      },
+
+      // ========================================================================
+      // 6. LE CHATELIER'S PRINCIPLE (HIGHER & SEPARATE — 12 Questions)
+      // ========================================================================
+      {
+        id: "T6_Q61",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Le Chatelier's Principle (Higher & Triple)",
+        stem: "What does Le Chatelier's Principle state when a system at dynamic equilibrium is subjected to a change in conditions (concentration, temperature, or pressure)?",
+        formula: null,
+        options: [
+          "The system responds to counteract (oppose) the change and restore a new equilibrium",
+          "The system amplifies the change to destroy all reactants",
+          "The system permanently stops both the forward and reverse reactions",
+          "The activation energy doubles to prevent any shift"
+        ],
+        answer: 0,
+        insight: "AQA Higher Tier key principle: If a system is at equilibrium and a change is made to any of the conditions, then the system responds to counteract the change."
+      },
+      {
+        id: "T6_Q62",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Le Chatelier's Principle (Higher & Triple)",
+        stem: "Consider the equilibrium: A(aq) + B(aq) &#8652; C(aq) + D(aq). What happens to the equilibrium position and yield of C if the concentration of reactant A is INCREASED?",
+        formula: "A + B &#8652; C + D",
+        options: [
+          "The equilibrium shifts to the RIGHT (products side) to reduce the extra A, increasing the yield of C and D",
+          "The equilibrium shifts to the LEFT (reactants side), decreasing the yield of C",
+          "There is no shift in equilibrium position",
+          "All of substance B precipitates out as a solid"
+        ],
+        answer: 0,
+        insight: "Adding more reactant A causes the system to oppose the increase by using up A—shifting equilibrium to the right and forming more products."
+      },
+      {
+        id: "T6_Q63",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Le Chatelier's Principle (Higher & Triple)",
+        stem: "In the Haber process, the forward reaction is EXOTHERMIC: N<sub>2</sub>(g) + 3H<sub>2</sub>(g) &#8652; 2NH<sub>3</sub>(g) (&Delta;H = &minus;92 kJ/mol). What happens to the equilibrium yield of ammonia if the TEMPERATURE is INCREASED?",
+        formula: "N<sub>2</sub>(g) + 3H<sub>2</sub>(g) &#8652; 2NH<sub>3</sub>(g) &nbsp;|&nbsp; Forward = Exothermic",
+        options: [
+          "The equilibrium shifts to the LEFT (the endothermic reverse direction) to absorb the added heat, so the yield of ammonia DECREASES",
+          "The equilibrium shifts to the RIGHT (the exothermic forward direction), so the yield of ammonia increases",
+          "Temperature has no effect on the yield of ammonia",
+          "The ammonia decomposes into carbon and water"
+        ],
+        answer: 0,
+        insight: "Increasing temperature ALWAYS favours the ENDOTHERMIC direction (to take in the extra heat). Here the reverse reaction is endothermic, so yield of NH<sub>3</sub> falls."
+      },
+      {
+        id: "T6_Q64",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Le Chatelier's Principle (Higher & Triple)",
+        stem: "In the Haber process: N<sub>2</sub>(g) + 3H<sub>2</sub>(g) &#8652; 2NH<sub>3</sub>(g), there are 4 moles of gas on the left and 2 moles of gas on the right. What happens to the equilibrium yield of ammonia if the PRESSURE is INCREASED?",
+        formula: "4 gas molecules (left) &#8652; 2 gas molecules (right)",
+        options: [
+          "The equilibrium shifts to the RIGHT (fewer gas molecules) to reduce the pressure, so the yield of ammonia INCREASES",
+          "The equilibrium shifts to the LEFT (more gas molecules), decreasing the yield of ammonia",
+          "Pressure has no effect because both sides contain gases",
+          "The nitrogen turns into a solid"
+        ],
+        answer: 0,
+        insight: "Increasing pressure shifts a gaseous equilibrium toward the side with FEWER gas molecules (2 molecules on right vs. 4 on left), increasing NH<sub>3</sub> yield."
+      },
+      {
+        id: "T6_Q65",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Le Chatelier's Principle (Higher & Triple)",
+        stem: "Consider the gaseous equilibrium: H<sub>2</sub>(g) + I<sub>2</sub>(g) &#8652; 2HI(g) (2 moles of gas on the left; 2 moles of gas on the right). How does INCREASING the pressure affect the equilibrium position?",
+        formula: "2 gas molecules &#8652; 2 gas molecules",
+        options: [
+          "There is NO change in equilibrium position (yield stays the same), because both sides have the exact same number of gas molecules",
+          "It shifts to the right because HI is heavier",
+          "It shifts to the left because hydrogen is smaller",
+          "It stops the reaction completely"
+        ],
+        answer: 0,
+        insight: "When the total number of gaseous molecules is equal on both sides (1 + 1 = 2 vs. 2), changing pressure has zero effect on the equilibrium position (though rate increases)."
+      },
+      {
+        id: "T6_Q66",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Le Chatelier's Principle (Higher & Triple)",
+        stem: "Brown nitrogen dioxide gas (NO<sub>2</sub>) forms an equilibrium with colourless dinitrogen tetroxide gas (N<sub>2</sub>O<sub>4</sub>): 2NO<sub>2</sub>(g) &#8652; N<sub>2</sub>O<sub>4</sub>(g) (Forward = Exothermic). What is observed when a sealed syringe of this gas mixture is placed into HOT water?",
+        formula: "2NO<sub>2</sub>(g) [Brown] &#8652; N<sub>2</sub>O<sub>4</sub>(g) [Colourless] &nbsp;|&nbsp; &Delta;H = &minus;57 kJ/mol",
+        options: [
+          "The mixture turns DARKER BROWN because higher temperature shifts equilibrium to the endothermic left, forming more brown NO<sub>2</sub>",
+          "The mixture turns completely colourless because more N<sub>2</sub>O<sub>4</sub> forms",
+          "The gas turns bright green",
+          "No colour change occurs"
+        ],
+        answer: 0,
+        insight: "Heating favours the endothermic reverse direction (left), converting colourless N<sub>2</sub>O<sub>4</sub> into dark brown NO<sub>2</sub>."
+      },
+      {
+        id: "T6_Q67",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Le Chatelier's Principle (Higher & Triple)",
+        stem: "Using the same equilibrium: 2NO<sub>2</sub>(g) [Brown] &#8652; N<sub>2</sub>O<sub>4</sub>(g) [Colourless], what happens to the equilibrium position when the plunger of the sealed syringe is pushed IN (increasing pressure at constant temperature)?",
+        formula: "2 gas molecules (left) &#8652; 1 gas molecule (right)",
+        options: [
+          "After briefly darkening due to compression, the mixture becomes PALER as equilibrium shifts right (fewer gas molecules) to form colourless N<sub>2</sub>O<sub>4</sub>",
+          "The equilibrium shifts left to form more brown NO<sub>2</sub>",
+          "The syringe explodes because N<sub>2</sub>O<sub>4</sub> is a solid",
+          "Pressure has no effect on the equilibrium"
+        ],
+        answer: 0,
+        insight: "Higher pressure favours the side with fewer gas molecules (1 mole of N<sub>2</sub>O<sub>4</sub> vs. 2 moles of NO<sub>2</sub>), shifting equilibrium to the right."
+      },
+      {
+        id: "T6_Q68",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Le Chatelier's Principle (Higher & Triple)",
+        stem: "In the industrial production of ethanol from ethene and steam: C<sub>2</sub>H<sub>4</sub>(g) + H<sub>2</sub>O(g) &#8652; C<sub>2</sub>H<sub>5</sub>OH(g) (&Delta;H = &minus;45 kJ/mol). Which combination of conditions gives the HIGHEST equilibrium yield of ethanol?",
+        formula: "2 gas molecules &#8652; 1 gas molecule &nbsp;|&nbsp; Exothermic forward",
+        options: [
+          "Low temperature and high pressure",
+          "High temperature and low pressure",
+          "High temperature and high pressure",
+          "Low temperature and low pressure"
+        ],
+        answer: 0,
+        insight: "Exothermic forward &rarr; low temperature shifts right; 2 moles gas &rarr; 1 mole gas &rarr; high pressure shifts right."
+      },
+      {
+        id: "T6_Q69",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Le Chatelier's Principle (Higher & Triple)",
+        stem: "In the Haber process (N<sub>2</sub> + 3H<sub>2</sub> &#8652; 2NH<sub>3</sub>, exothermic forward), a low temperature gives a higher equilibrium yield, yet industry uses a COMPROMISE temperature of 450 &deg;C. Why?",
+        formula: "Compromise Conditions (AQA 8462)",
+        options: [
+          "At low temperatures the rate of reaction would be far too slow to be economical; 450 &deg;C gives a reasonable yield at a fast, profitable rate",
+          "Because ammonia turns into a solid below 400 &deg;C",
+          "Because the iron catalyst melts below 450 &deg;C",
+          "Because high temperature increases the equilibrium yield of ammonia"
+        ],
+        answer: 0,
+        insight: "Classic AQA 8462 compromise explanation: balancing equilibrium yield (favoured by low T) against reaction rate (favoured by high T)."
+      },
+      {
+        id: "T6_Q70",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Le Chatelier's Principle (Higher & Triple)",
+        stem: "Why does the Haber process use a pressure of 200 atmospheres rather than 1000 atmospheres, even though 1000 atmospheres would give a higher equilibrium yield of ammonia?",
+        formula: "N<sub>2</sub>(g) + 3H<sub>2</sub>(g) &#8652; 2NH<sub>3</sub>(g)",
+        options: [
+          "Building thick-walled pipes/vessels to withstand 1000 atm is extremely expensive and hazardous, and compressing gases requires huge energy costs",
+          "At 1000 atm the equilibrium shifts to the left",
+          "At 1000 atm the iron catalyst turns into a gas",
+          "Ammonia decomposes above 250 atm"
+        ],
+        answer: 0,
+        insight: "200 atm is a safe, cost-effective compromise between high yield/rate and the capital/energy costs of ultra-high-pressure engineering."
+      },
+      {
+        id: "T6_Q71",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Le Chatelier's Principle (Higher & Triple)",
+        stem: "In the Contact process for making sulfuric acid: 2SO<sub>2</sub>(g) + O<sub>2</sub>(g) &#8652; 2SO<sub>3</sub>(g) (&Delta;H = &minus;197 kJ/mol). What happens if sulfur trioxide (SO<sub>3</sub>) is continuously REMOVED from the reaction vessel?",
+        formula: "2SO<sub>2</sub> + O<sub>2</sub> &#8652; 2SO<sub>3</sub>",
+        options: [
+          "The equilibrium shifts to the RIGHT to replace the removed SO<sub>3</sub>, converting more SO<sub>2</sub> and O<sub>2</sub> into product",
+          "The equilibrium shifts to the LEFT to make more SO<sub>2</sub>",
+          "The reaction stops permanently",
+          "The vanadium(V) oxide catalyst is consumed"
+        ],
+        answer: 0,
+        insight: "Removing a product reduces its concentration, so by Le Chatelier's Principle the equilibrium shifts right to produce more of it (just like liquefying and removing NH<sub>3</sub> in the Haber process!)."
+      },
+      {
+        id: "T6_Q72",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Le Chatelier's Principle (Higher & Triple)",
+        stem: "In a reversible reaction, the forward reaction is ENDOTHERMIC: CH<sub>4</sub>(g) + H<sub>2</sub>O(g) &#8652; CO(g) + 3H<sub>2</sub>(g) (&Delta;H = +206 kJ/mol). Which changes will BOTH increase the equilibrium yield of hydrogen gas?",
+        formula: "2 gas molecules &#8652; 4 gas molecules &nbsp;|&nbsp; Endothermic forward",
+        options: [
+          "Increasing temperature (favours endothermic forward) AND decreasing pressure (favours side with more gas molecules: 4 vs. 2)",
+          "Decreasing temperature AND increasing pressure",
+          "Adding a nickel catalyst AND increasing pressure",
+          "Decreasing temperature AND removing steam"
+        ],
+        answer: 0,
+        insight: "Forward is endothermic (+206 kJ/mol) &rarr; raise T to shift right. Right has MORE gas molecules (4 vs. 2) &rarr; lower P to shift right."
+      }
+    ];
+
+    /* ==========================================================================
+       APPLICATION STATE
+       ========================================================================== */
+    const configState = {
+      studentName: "",
+      studentEmail: "",
+      tier: "higher",         // 'foundation' | 'higher' | 'separate'
+      focus: "all",           // 'all' | 'rp5'
+      questionCount: 20
+    };
+
+    const quizState = {
+      questions: [],
+      currentIndex: 0,
+      answers: [],            // { question, selectedIndex, isCorrect }
+      answeredCurrent: false,
+      isRetryMode: false
+    };
+
+    const TIER_META = {
+      foundation: { name: "Foundation Tier", badge: "Foundation Tier Selected" },
+      higher: { name: "Higher Tier", badge: "Higher Tier Selected" },
+      separate: { name: "Separate Chemistry", badge: "Separate Chemistry Selected" }
+    };
+
+    /* ==========================================================================
+       CONFIGURATION SCREEN INTERACTIONS
+       ========================================================================== */
+    function getFilteredPool() {
+      return QUESTION_POOL.filter(q => {
+        const tierMatch = q.tiers.includes(configState.tier);
+        const focusMatch = q.focus.includes(configState.focus);
+        return tierMatch && focusMatch;
+      });
+    }
+
+    function updateConfigUI() {
+      ["foundation", "higher", "separate"].forEach(t => {
+        const card = document.getElementById(`tier-card-${t}`);
+        const isSel = configState.tier === t;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+      });
+      document.getElementById("selected-tier-badge").textContent = TIER_META[configState.tier].badge;
+
+      ["all", "rp5"].forEach(f => {
+        const card = document.getElementById(`focus-card-${f}`);
+        const chk = document.getElementById(`focus-check-${f}`);
+        const isSel = configState.focus === f;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+        chk.classList.toggle("hidden", !isSel);
+      });
+
+      document.querySelectorAll(".count-btn").forEach(btn => {
+        const val = Number(btn.getAttribute("data-count"));
+        btn.classList.toggle("active", val === configState.questionCount);
+      });
+
+      const pool = getFilteredPool();
+      const focusSuffix = configState.focus === "rp5" ? " (Required Practical 5)" : "";
+      document.getElementById("available-q-label").textContent =
+        `${pool.length} unique questions available for ${TIER_META[configState.tier].name}${focusSuffix}`;
+
+      const effectiveCount = Math.min(configState.questionCount, pool.length);
+      const countDisplay = configState.questionCount > pool.length
+        ? `${effectiveCount} Available Questions`
+        : `${configState.questionCount} Questions`;
+
+      document.getElementById("btn-start-quiz").innerHTML =
+        `Start ${TIER_META[configState.tier].name} Quiz (${countDisplay}) &rarr;`;
+    }
+
+    function selectTier(tierKey) {
+      configState.tier = tierKey;
+      updateConfigUI();
+    }
+
+    function selectFocus(focusKey) {
+      configState.focus = focusKey;
+      updateConfigUI();
+    }
+
+    function selectCount(num) {
+      configState.questionCount = num;
+      updateConfigUI();
+    }
+
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function launchConfiguredQuiz() {
+      const nameInput = document.getElementById("student-name");
+      const errorMsg = document.getElementById("name-error-msg");
+      const rawName = nameInput.value.trim();
+
+      if (!rawName) {
+        nameInput.classList.remove("input-error");
+        void nameInput.offsetWidth;
+        nameInput.classList.add("input-error");
+        errorMsg.classList.remove("hidden");
+        nameInput.focus();
+        return;
+      }
+
+      nameInput.classList.remove("input-error");
+      errorMsg.classList.add("hidden");
+
+      configState.studentName = rawName;
+      configState.studentEmail = document.getElementById("student-email").value.trim();
+
+      const pool = shuffleArray(getFilteredPool());
+      const selectedQuestions = pool.slice(0, Math.min(configState.questionCount, pool.length));
+
+      quizState.questions = selectedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = false;
+
+      switchScreen("view-quiz");
+      document.getElementById("banner-main-title").textContent = "The Rate & Extent of Chemical Change";
+      document.getElementById("banner-main-sub").textContent =
+        `${TIER_META[configState.tier].name} • ${configState.focus === "rp5" ? "Required Practical 5 (Rates of Reaction) Drill" : "Full Topic 6 Assessment"}`;
+
+      renderActiveQuestion();
+    }
+
+    function startRetryMissed() {
+      const missedQuestions = quizState.answers
+        .filter(item => !item.isCorrect)
+        .map(item => item.question);
+
+      if (missedQuestions.length === 0) return;
+
+      quizState.questions = missedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = true;
+
+      switchScreen("view-quiz");
+      renderActiveQuestion();
+    }
+
+    function returnToConfig() {
+      switchScreen("view-config");
+      document.getElementById("banner-main-title").textContent = "Configure Your Rate & Extent of Change Quiz";
+      document.getElementById("banner-main-sub").textContent =
+        "Enter your name, choose your tier, select either all Topic 6 content or Required Practical 5 drills, and pick your question count.";
+      updateConfigUI();
+    }
+
+    function switchScreen(activeId) {
+      ["view-config", "view-quiz", "view-report"].forEach(id => {
+        document.getElementById(id).classList.toggle("hidden", id !== activeId);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /* ==========================================================================
+       ACTIVE QUIZ RENDERING & LOGIC
+       ========================================================================== */
+    function renderActiveQuestion() {
+      const total = quizState.questions.length;
+      const idx = quizState.currentIndex;
+      const qObj = quizState.questions[idx];
+      quizState.answeredCurrent = false;
+
+      document.getElementById("hud-student-pill").textContent = configState.studentName;
+      document.getElementById("hud-tier-pill").textContent = TIER_META[configState.tier].name;
+      document.getElementById("hud-topic-pill").textContent = qObj.topic;
+      document.getElementById("hud-retry-pill").classList.toggle("hidden", !quizState.isRetryMode);
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+      document.getElementById("hud-counter").textContent = `Question ${idx + 1} of ${total}`;
+
+      const pct = Math.round((idx / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${pct}%`;
+
+      document.getElementById("q-kicker-label").textContent = `Question ${idx + 1} of ${total}`;
+      document.getElementById("q-stem-text").innerHTML = qObj.stem;
+
+      const formulaBox = document.getElementById("q-formula-box");
+      if (qObj.formula) {
+        formulaBox.innerHTML = qObj.formula;
+        formulaBox.classList.remove("hidden");
+      } else {
+        formulaBox.classList.add("hidden");
+      }
+
+      const optionsContainer = document.getElementById("quiz-options-list");
+      optionsContainer.innerHTML = "";
+      const letters = ["A", "B", "C", "D"];
+
+      qObj.options.forEach((optText, optIdx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "opt-btn";
+        btn.innerHTML = `
+          <span class="opt-letter">${letters[optIdx]}</span>
+          <span>${optText}</span>
+        `;
+        btn.addEventListener("click", () => submitOption(optIdx));
+        optionsContainer.appendChild(btn);
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      fbPanel.className = "feedback-panel hidden";
+
+      const nextBtn = document.getElementById("btn-next-question");
+      nextBtn.classList.add("hidden");
+      nextBtn.innerHTML = idx === total - 1 ? "View Diagnostic Report &rarr;" : "Next Question &rarr;";
+    }
+
+    function submitOption(selectedIdx) {
+      if (quizState.answeredCurrent) return;
+      quizState.answeredCurrent = true;
+
+      const qObj = quizState.questions[quizState.currentIndex];
+      const isCorrect = selectedIdx === qObj.answer;
+
+      quizState.answers.push({
+        question: qObj,
+        selectedIndex: selectedIdx,
+        isCorrect: isCorrect
+      });
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+
+      const total = quizState.questions.length;
+      const donePct = Math.round(((quizState.currentIndex + 1) / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${donePct}%`;
+
+      const optionBtns = document.querySelectorAll("#quiz-options-list .opt-btn");
+      optionBtns.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === qObj.answer) {
+          btn.classList.add("correct");
+        } else if (idx === selectedIdx && !isCorrect) {
+          btn.classList.add("incorrect");
+        } else {
+          btn.classList.add("dimmed");
+        }
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      const fbStatus = document.getElementById("fb-status-text");
+      const fbInsight = document.getElementById("fb-insight-text");
+
+      fbPanel.classList.remove("hidden", "fb-pass", "fb-fail");
+      if (isCorrect) {
+        fbPanel.classList.add("fb-pass");
+        fbStatus.textContent = "✓ Correct — Full Marks!";
+      } else {
+        fbPanel.classList.add("fb-fail");
+        const correctLetter = ["A", "B", "C", "D"][qObj.answer];
+        fbStatus.textContent = `✗ Incorrect — Correct Answer: Option ${correctLetter}`;
+      }
+      fbInsight.innerHTML = qObj.insight;
+
+      document.getElementById("btn-next-question").classList.remove("hidden");
+    }
+
+    function advanceQuestion() {
+      if (quizState.currentIndex < quizState.questions.length - 1) {
+        quizState.currentIndex++;
+        renderActiveQuestion();
+      } else {
+        showDiagnosticReport();
+      }
+    }
+
+    /* ==========================================================================
+       DIAGNOSTIC REPORT
+       ========================================================================== */
+    function showDiagnosticReport() {
+      switchScreen("view-report");
+      document.getElementById("banner-main-title").textContent = "Topic 6 Diagnostic Performance Report";
+      document.getElementById("banner-main-sub").textContent =
+        `Completed by ${configState.studentName}${configState.studentEmail ? ` (${configState.studentEmail})` : ""} • ${TIER_META[configState.tier].name}`;
+
+      const total = quizState.answers.length;
+      const correct = quizState.answers.filter(a => a.isCorrect).length;
+      const missed = total - correct;
+      const pct = Math.round((correct / total) * 100);
+
+      document.getElementById("rep-student-header").textContent =
+        `${configState.studentName} • ${TIER_META[configState.tier].name}${quizState.isRetryMode ? " (Retry Round)" : ""}`;
+      document.getElementById("rep-pct-val").textContent = `${pct}%`;
+      document.getElementById("rep-frac-val").textContent = `(${correct} / ${total})`;
+      document.getElementById("rep-grade-pill").textContent = estimateAqaGrade(pct, configState.tier);
+
+      const msgEl = document.getElementById("rep-msg-text");
+      if (pct === 100) {
+        msgEl.textContent = `Outstanding work, ${configState.studentName}! You scored 100% across every question. Your AQA Topic 6 Rate & Extent of Chemical Change knowledge is exam-ready.`;
+      } else if (pct >= 80) {
+        msgEl.textContent = `Strong performance, ${configState.studentName}! You have a solid command of Rates & Equilibrium. Click 'Retry Missed Questions' below to master the final ${missed} question${missed === 1 ? "" : "s"}.`;
+      } else if (pct >= 50) {
+        msgEl.textContent = `Good progress, ${configState.studentName}! Review the amber and red sub-topics below, read the AQA Examiner Insights, and retry your missed questions to boost your grade.`;
+      } else {
+        msgEl.textContent = `Great active recall practice, ${configState.studentName}! Focus on the Priority Revision sub-topics in red below, study the worked solutions, and retry your missed questions.`;
+      }
+
+      const retryBtn = document.getElementById("btn-retry-missed");
+      if (missed > 0) {
+        retryBtn.classList.remove("hidden");
+        retryBtn.textContent = `Retry Missed Questions (${missed})`;
+      } else {
+        retryBtn.classList.add("hidden");
+      }
+
+      const topicMap = {};
+      quizState.answers.forEach(entry => {
+        const t = entry.question.topic;
+        if (!topicMap[t]) topicMap[t] = { correct: 0, total: 0 };
+        topicMap[t].total++;
+        if (entry.isCorrect) topicMap[t].correct++;
+      });
+
+      const masteryGrid = document.getElementById("rep-mastery-grid");
+      masteryGrid.innerHTML = "";
+
+      Object.keys(topicMap).forEach(topicName => {
+        const { correct: c, total: t } = topicMap[topicName];
+        const subPct = Math.round((c / t) * 100);
+
+        let chipClass = "sc-weak";
+        let fillClass = "fill-r";
+        let statusLabel = "Priority Revision";
+
+        if (subPct >= 80) {
+          chipClass = "sc-strong";
+          fillClass = "fill-g";
+          statusLabel = "Strong Area";
+        } else if (subPct >= 50) {
+          chipClass = "sc-dev";
+          fillClass = "fill-a";
+          statusLabel = "Developing";
+        }
+
+        const tip = subPct >= 80
+          ? "Secure understanding demonstrated—maintain with spaced active recall."
+          : (SUBTOPIC_GUIDANCE[topicName] || "Review examiner insights and retry missed questions in this sub-topic.");
+
+        const card = document.createElement("div");
+        card.className = "mastery-item";
+        card.innerHTML = `
+          <div class="mastery-item-top">
+            <span class="mastery-name">${topicName}</span>
+            <div class="mastery-right">
+              <span class="status-chip ${chipClass}">${statusLabel}</span>
+              <span style="font-size:0.84rem; font-weight:700; color:var(--slate-700);">${c}/${t} (${subPct}%)</span>
+            </div>
+          </div>
+          <div class="mastery-bar-track">
+            <div class="mastery-bar-fill ${fillClass}" style="width: ${subPct}%"></div>
+          </div>
+          <div class="mastery-tip">${tip}</div>
+        `;
+        masteryGrid.appendChild(card);
+      });
+
+      const reviewList = document.getElementById("rep-review-list");
+      reviewList.innerHTML = "";
+      reviewList.classList.add("hidden");
+      document.getElementById("btn-toggle-review").textContent = "Show All Answers & Insights";
+
+      const letters = ["A", "B", "C", "D"];
+      quizState.answers.forEach((entry, idx) => {
+        const q = entry.question;
+        const userAns = `${letters[entry.selectedIndex]}. ${q.options[entry.selectedIndex]}`;
+        const rightAns = `${letters[q.answer]}. ${q.options[q.answer]}`;
+
+        const item = document.createElement("div");
+        item.className = `review-card ${entry.isCorrect ? "rc-ok" : "rc-bad"}`;
+        item.innerHTML = `
+          <div class="rc-kicker">Question ${idx + 1} &bull; ${q.topic} &bull; ${entry.isCorrect ? "Correct" : "Incorrect"}</div>
+          <div class="rc-q">${q.stem}</div>
+          <div class="rc-ans"><strong>Your Answer:</strong> <span style="color:${entry.isCorrect ? "var(--emerald-700)" : "var(--ruby-600)"}; font-weight:600;">${userAns}</span></div>
+          ${!entry.isCorrect ? `<div class="rc-ans"><strong>Correct Answer:</strong> <span style="color:var(--emerald-700); font-weight:600;">${rightAns}</span></div>` : ""}
+          <div class="rc-exp"><strong>AQA Examiner Insight:</strong> ${q.insight}</div>
+        `;
+        reviewList.appendChild(item);
+      });
+    }
+
+    function estimateAqaGrade(pct, tier) {
+      if (tier === "foundation") {
+        if (pct >= 80) return "Estimated AQA Indicator: Grade 5 (Maximum Foundation)";
+        if (pct >= 65) return "Estimated AQA Indicator: Grade 4 (Standard Pass)";
+        if (pct >= 47) return "Estimated AQA Indicator: Grade 3";
+        return "Estimated AQA Indicator: Grade 1–2 (Keep Practising)";
+      }
+      if (pct >= 87) return "Estimated AQA Indicator: Grade 9";
+      if (pct >= 75) return "Estimated AQA Indicator: Grade 8";
+      if (pct >= 65) return "Estimated AQA Indicator: Grade 7";
+      if (pct >= 53) return "Estimated AQA Indicator: Grade 6";
+      if (pct >= 40) return "Estimated AQA Indicator: Grade 5";
+      return "Estimated AQA Indicator: Grade 4 / Below";
+    }
+
+    function toggleReviewSection() {
+      const list = document.getElementById("rep-review-list");
+      const btn = document.getElementById("btn-toggle-review");
+      const isHidden = list.classList.toggle("hidden");
+      btn.textContent = isHidden ? "Show All Answers & Insights" : "Hide All Answers & Insights";
+      if (!isHidden) {
+        list.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    /* ==========================================================================
+       KEYBOARD SHORTCUTS & INITIALISATION
+       ========================================================================== */
+    document.getElementById("student-name").addEventListener("input", function () {
+      if (this.value.trim()) {
+        this.classList.remove("input-error");
+        document.getElementById("name-error-msg").classList.add("hidden");
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (document.getElementById("view-quiz").classList.contains("hidden")) return;
+      const key = e.key.toUpperCase();
+      if (!quizState.answeredCurrent) {
+        if (key === "1" || key === "A") submitOption(0);
+        else if (key === "2" || key === "B") submitOption(1);
+        else if (key === "3" || key === "C") submitOption(2);
+        else if (key === "4" || key === "D") submitOption(3);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        advanceQuestion();
+      }
+    });
+
+    updateConfigUI();
+  </script>
+</body>
+</html>
